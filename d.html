@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<p></p>
+
+
+<div class="container-fluid fondo-contacto">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="contacto-espacio">
+                <h2 class="titulo">
+                    <?php the_field('contacto'); ?>
+                </h2>
+
+                <h3 class="segundatipo dfg poli gris">
+                    <?php the_field('textoextra1'); ?>
+                </h3>
+                <p class="arg gris">
+                    <?php the_field('boton-contacto1'); ?>
+                </p>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 dis">
+                        <div>
+                            <?php if (get_field('iconoemail')) : ?>
+                            <img class="img-fluid iconos-contacto" src="<?php the_field('iconoemail'); ?>"
+                                alt="icono email dibujado" />
+                            <?php endif; ?>
+                        </div>
+                        <p class="segundatipo">
+                            <?php the_field('ubicacion'); ?>
+                        </p>
+                    </div>
+                    <div class="dis">
+                        <div>
+                            <?php if (get_field('iconotelefono')) : ?>
+                            <img class="img-fluid iconos-contacto" src="<?php the_field('iconotelefono'); ?>"
+                                alt="icono de celular dibujado" />
+                            <?php endif; ?>
+                        </div>
+                        <p class="segundatipo">
+                            <?php the_field('telefono'); ?>
+                        </p>
+                    </div>
+
+
+                    <div class="rrss col-md-6">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <?php if (get_field('facebook')) : ?>
+                                <img class="img-fluid iconos-contacto1" src="<?php the_field('facebook'); ?>"
+                                    alt="icono de facebook blanco" />
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="espacios col-md-4">
+                                <?php if (get_field('instagram')) : ?>
+                                <img class="img-fluid iconos-contacto1" src="<?php the_field('instagram'); ?>"
+                                    alt="icono de instagram blanco" />
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="col-md-4">
+                                <?php if (get_field('linkedin')) : ?>
+                                <img class="img-fluid iconos-contacto1" src="<?php the_field('linkedin'); ?>"
+                                    alt="icono de celular dibujado" />
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-md-6">
+                <?php if (get_field('imagen-contacto')) : ?>
+                <img class="img-fluid tamano" src="<?php the_field('imagen-contacto'); ?>"
+                    alt="icono de una taza de cafe junto con una planta y una laptop" />
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style></style>
